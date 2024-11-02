@@ -3,13 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #4ea691;
+    background-color: #77bfae;
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #4ea691;
+    background-color: #77bfae;
     color: white;
 }
 
@@ -46,7 +46,7 @@ input[type="number"] {
 }
 
 button {
-    background-color: #4ea691;
+    background-color: #77bfae;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -55,7 +55,7 @@ button {
 }
 
 button:hover {
-    background-color: #4ea691;
+    background-color: #77bfae;
 }
 
 .checkout-section {
@@ -66,7 +66,7 @@ button:hover {
 #cart-summary {
     margin-top: 20px;
     padding: 10px;
-    background-color: #4ea691;
+    background-color: #77bfae;
     border: 1px solid #ddd;
     width: 80%;
     max-width: 400px;
