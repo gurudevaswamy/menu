@@ -8,39 +8,48 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Restaurant</h1>
+        <h1>Welcome to Duddu's Restaurant</h1>
         <p>Explore our delicious menu and order your favorites!</p>
     </header>
 
     <section class="menu">
         <!-- Each food item card -->
-        <div class="food-item" data-name="Burger" data-price="5.99">
-            <img src="images/burger.jpg" alt="Burger">
-            <h3>Burger</h3>
-            <p>$5.99</p>
-            <label for="burger-quantity">Quantity:</label>
-            <input type="number" id="burger-quantity" min="1" max="10" value="1">
-            <button onclick="addToCart('Burger', 5.99, 'burger-quantity')">Add to Cart</button>
+        <div class="food-item" data-name="Idli" data-price="20">
+            <img src="images/idli.jpg" alt="Idli">
+            <h3>Idli<h3>
+            <p>₹20</p>
+            <label for="idli-quantity">Quantity:</label>
+            <input type="number" id="burger-quantity" min="0" max="10" value="0">
+            <button onclick="addToCart('Idli', 20, 'idli-quantity')">Add to Cart</button>
         </div>
 
-        <div class="food-item" data-name="Pizza" data-price="8.99">
-            <img src="images/pizza.jpg" alt="Pizza">
-            <h3>Pizza</h3>
-            <p>$8.99</p>
-            <label for="pizza-quantity">Quantity:</label>
-            <input type="number" id="pizza-quantity" min="1" max="10" value="1">
-            <button onclick="addToCart('Pizza', 8.99, 'pizza-quantity')">Add to Cart</button>
+        <div class="food-item" data-name="Halwa" data-price="40">
+            <img src="images/halwa.jpg" alt="Halwa">
+            <h3>Halwa</h3>
+            <p>₹40</p>
+            <label for="halwa-quantity">Quantity:</label>
+            <input type="number" id="halwa-quantity" min="0" max="10" value="0">
+            <button onclick="addToCart('Halwa', 40, 'pizza-quantity')">Add to Cart</button>
         </div>
 
-        <div class="food-item" data-name="Pasta" data-price="7.49">
-            <img src="images/pasta.jpg" alt="Pasta">
-            <h3>Pasta</h3>
-            <p>$7.49</p>
-            <label for="pasta-quantity">Quantity:</label>
-            <input type="number" id="pasta-quantity" min="1" max="10" value="1">
-            <button onclick="addToCart('Pasta', 7.49, 'pasta-quantity')">Add to Cart</button>
+        <div class="food-item" data-name="Vada" data-price="30">
+            <img src="images/vada.jpg" alt="Vada">
+            <h3>Vada</h3>
+            <p>₹30</p>
+            <label for="vada-quantity">Quantity:</label>
+            <input type="number" id="vada-quantity" min="0" max="10" value="0">
+            <button onclick="addToCart('Vada', 30, 'vada-quantity')">Add to Cart</button>
         </div>
-
+                
+        <div class="food-item" data-name="Poori" data-price="40">
+            <img src="images/poori.jpg" alt="Poori">
+            <h3>Poori</h3>
+            <p>₹40</p>
+            <label for="poori-quantity">Quantity:</label>
+            <input type="number" id="poori-quantity" min="0" max="10" value="0">
+            <button onclick="addToCart('Poori', 40, 'poori-quantity')">Add to Cart</button>
+        </div>
+                
         <!-- Add more food items here -->
     </section>
 
