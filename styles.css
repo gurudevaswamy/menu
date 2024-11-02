@@ -6,6 +6,36 @@ body {
     background-color: #ccebe3;
 }
 
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the items */
+}
+
+nav ul li {
+    margin: 0 15px; /* Horizontal spacing between items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Color change on hover */
+}
+
+/* Header Styling */
 header {
     text-align: center;
     padding: 20px;
@@ -13,6 +43,26 @@ header {
     color: white;
 }
 
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#about, #menu, #contact, #checkout {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Menu Section */
 .menu {
     display: flex;
     flex-wrap: wrap;
@@ -41,24 +91,35 @@ header {
     margin: 10px 0;
 }
 
-input[type="number"] {
-    width: 60px;
+.food-item p {
+    font-size: 1.1rem;
+    color: #333;
 }
 
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Button Styling */
 button {
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #77b5bf;
     color: white;
     border: none;
     padding: 8px 16px;
     cursor: pointer;
     border-radius: 4px;
+    font-size: 1rem;
 }
 
 button:hover {
-    background-color: #77b5bf;
+    background-color: #5a9aa5; /* Darker color on hover */
 }
 
+/* Checkout Section */
 .checkout-section {
     text-align: center;
     margin-top: 20px;
@@ -68,11 +129,17 @@ button:hover {
     margin-top: 20px;
     padding: 10px;
     background-color: #77b5bf;
+    color: white;
     border: 1px solid #ddd;
     width: 80%;
     max-width: 400px;
     margin: 20px auto;
     text-align: left;
     display: none;
+    border-radius: 8px;
 }
 
+#cart-summary p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
