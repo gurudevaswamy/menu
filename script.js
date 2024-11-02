@@ -4,7 +4,7 @@ let cart = [];
 // Function to add item to the cart
 function addToCart(itemName, itemPrice, quantityId) {
     const quantity = parseInt(document.getElementById(quantityId).value);
-    if (quantity < 1 || quantity > 10) {
+    if (quantity < 0 || quantity > 10) {
         alert("Please select a quantity between 1 and 10.");
         return;
     }
@@ -40,8 +40,8 @@ function viewCart() {
     cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
-        cartSummary.innerHTML += `<p>${item.name} (x${item.quantity}) - $${itemTotal.toFixed(2)}</p>`;
+        cartSummary.innerHTML += `<p>${item.name} (x${item.quantity}) - ₹${itemTotal.toFixed(2)}</p>`;
     });
 
-    cartSummary.innerHTML += `<hr><p><strong>Total: $${total.toFixed(2)}</strong></p>`;
+    cartSummary.innerHTML += `<hr><p><strong>Total: ₹${total.toFixed(2)}</strong></p>`;
 }
