@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #77bfae;
+    background-color: #9fe0d1;
 }
 
 header {
@@ -46,7 +46,7 @@ input[type="number"] {
 }
 
 button {
-    background-color: #77bfae;
+    background-color: #77b5bf;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -55,7 +55,7 @@ button {
 }
 
 button:hover {
-    background-color: #77bfae;
+    background-color: #77b5bf;
 }
 
 .checkout-section {
@@ -66,7 +66,7 @@ button:hover {
 #cart-summary {
     margin-top: 20px;
     padding: 10px;
-    background-color: #77bfae;
+    background-color: #77b5bf;
     border: 1px solid #ddd;
     width: 80%;
     max-width: 400px;
