@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Restaurant</h1>
+        <p>Explore our delicious menu and order your favorites!</p>
+    </header>
+
+    <section class="menu">
+        <!-- Each food item card -->
+        <div class="food-item" data-name="Burger" data-price="5.99">
+            <img src="images/burger.jpg" alt="Burger">
+            <h3>Burger</h3>
+            <p>$5.99</p>
+            <label for="burger-quantity">Quantity:</label>
+            <input type="number" id="burger-quantity" min="1" max="10" value="1">
+            <button onclick="addToCart('Burger', 5.99, 'burger-quantity')">Add to Cart</button>
+        </div>
+
+        <div class="food-item" data-name="Pizza" data-price="8.99">
+            <img src="images/pizza.jpg" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>$8.99</p>
+            <label for="pizza-quantity">Quantity:</label>
+            <input type="number" id="pizza-quantity" min="1" max="10" value="1">
+            <button onclick="addToCart('Pizza', 8.99, 'pizza-quantity')">Add to Cart</button>
+        </div>
+
+        <div class="food-item" data-name="Pasta" data-price="7.49">
+            <img src="images/pasta.jpg" alt="Pasta">
+            <h3>Pasta</h3>
+            <p>$7.49</p>
+            <label for="pasta-quantity">Quantity:</label>
+            <input type="number" id="pasta-quantity" min="1" max="10" value="1">
+            <button onclick="addToCart('Pasta', 7.49, 'pasta-quantity')">Add to Cart</button>
+        </div>
+
+        <!-- Add more food items here -->
+    </section>
+
+    <div class="checkout-section">
+        <h2>Checkout</h2>
+        <button onclick="viewCart()">View Cart</button>
+        <div id="cart-summary"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
