@@ -1,6 +1,43 @@
 // Cart array to store selected items
 let cart = [];
 
+// Simulate an API call to fetch menu items
+function fetchMenuItems() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([
+                { name: "Idli", price: 20, imageUrl: "images/idli.jpg" },
+                { name: "Vada", price: 30, imageUrl: "images/vada.jpg" },
+                { name: "Poori", price: 40, imageUrl: "images/puri.jpg" },
+                { name: "Halwa", price: 40, imageUrl: "images/halwa.jpg" }
+            ]);
+        }, 1000); // Simulate a 1-second delay
+    });
+}
+
+// Function to display menu items dynamically
+function displayMenuItems() {
+    const menuSection = document.getElementById("menu");
+    menuSection.innerHTML = "<h2>Our Menu</h2>"; // Clear existing content
+
+    // Fetch menu items from the simulated API
+    fetchMenuItems().then(menuItems => {
+        menuItems.forEach(item => {
+            const foodItemHTML = `
+                <div class="food-item" data-name="${item.name}" data-price="${item.price}">
+                    <img src="${item.imageUrl}" alt="${item.name}">
+                    <h3>${item.name}</h3>
+                    <p>₹${item.price}</p>
+                    <label for="${item.name.toLowerCase()}-quantity">Quantity:</label>
+                    <input type="number" id="${item.name.toLowerCase()}-quantity" min="0" max="10" value="0">
+                    <button onclick="addToCart('${item.name}', ${item.price}, '${item.name.toLowerCase()}-quantity')">Add to Cart</button>
+                </div>
+            `;
+            menuSection.innerHTML += foodItemHTML;
+        });
+    });
+}
+
 // Function to add item to the cart
 function addToCart(itemName, itemPrice, quantityId) {
     const quantity = parseInt(document.getElementById(quantityId).value);
@@ -9,9 +46,7 @@ function addToCart(itemName, itemPrice, quantityId) {
         return;
     }
 
-    // Check if the item is already in the cart
     const existingItem = cart.find(item => item.name === itemName);
-
     if (existingItem) {
         existingItem.quantity += quantity;
         if (existingItem.quantity > 10) {
@@ -45,3 +80,6 @@ function viewCart() {
 
     cartSummary.innerHTML += `<hr><p><strong>Total: ₹${total.toFixed(2)}</strong></p>`;
 }
+
+// Load the menu items on page load
+window.onload = displayMenuItems;
