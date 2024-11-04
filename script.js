@@ -9,11 +9,23 @@ function fetchMenuItems() {
                 { name: "Idli", price: 20, imageUrl: "images/idli.jpg" },
                 { name: "Vada", price: 30, imageUrl: "images/vada.jpg" },
                 { name: "Poori", price: 40, imageUrl: "images/puri.jpg" },
-                { name: "Bonda", price: 40, imageUrl: "images/bonda.jpg" },
                 { name: "Rice", price: 40, imageUrl: "images/rice.jpg" },
                 { name: "Upma", price: 40, imageUrl: "images/upma.jpg" },
                 { name: "Halwa", price: 40, imageUrl: "images/halwa.jpg" }
             ]);
+        }, 1000); // Simulate a 1-second delay
+    });
+}
+
+// Simulate an API call to submit the order
+function submitOrder(orderDetails) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (orderDetails && orderDetails.length > 0) {
+                resolve({ status: 'success', message: 'Order placed successfully!' });
+            } else {
+                reject({ status: 'error', message: 'Order failed: No items in order.' });
+            }
         }, 1000); // Simulate a 1-second delay
     });
 }
@@ -82,6 +94,21 @@ function viewCart() {
     });
 
     cartSummary.innerHTML += `<hr><p><strong>Total: ₹${total.toFixed(2)}</strong></p>`;
+}
+
+// Function to handle order submission
+function placeOrder() {
+    submitOrder(cart)
+        .then(response => {
+            alert(response.message);
+            // Clear cart after successful order
+            cart = [];
+            localStorage.removeItem('cart');
+            viewCart();
+        })
+        .catch(error => {
+            alert(error.message);
+        });
 }
 
 // Load the menu items on page load
