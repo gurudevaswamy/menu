@@ -9,6 +9,9 @@ function fetchMenuItems() {
                 { name: "Idli", price: 20, imageUrl: "images/idli.jpg" },
                 { name: "Vada", price: 30, imageUrl: "images/vada.jpg" },
                 { name: "Poori", price: 40, imageUrl: "images/puri.jpg" },
+                { name: "Bonda", price: 40, imageUrl: "images/bonda.jpg" },
+                { name: "Rice", price: 40, imageUrl: "images/rice.jpg" },
+                { name: "Upma", price: 40, imageUrl: "images/upma.jpg" },
                 { name: "Halwa", price: 40, imageUrl: "images/halwa.jpg" }
             ]);
         }, 1000); // Simulate a 1-second delay
