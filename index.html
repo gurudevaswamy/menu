@@ -18,55 +18,15 @@
     <nav>
         <ul>
             <li><a href="#menu">Menu</a></li>
-            <li><a href="#contact">Checkout</a></li>
-            <li><a href="#about">About Us</a></li>            
-            <li><a href="#checkout">Contact Us</a></li>
+            <li><a href="#checkout">Checkout</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
 
     <!-- Menu Section -->
     <section id="menu" class="menu">
-        <h2>Our Menu</h2>
-
-        <!-- Food Item: Idli -->
-        <div class="food-item" data-name="Idli" data-price="20">
-            <img src="images/idli.jpg" alt="Idli">
-            <h3>Idli</h3>
-            <p>₹20</p>
-            <label for="idli-quantity">Quantity:</label>
-            <input type="number" id="idli-quantity" min="0" max="10" value="0">
-            <button onclick="addToCart('Idli', 20, 'idli-quantity')">Add to Cart</button>
-        </div>
-
-        <!-- Food Item: Vada -->
-        <div class="food-item" data-name="Vada" data-price="30">
-            <img src="images/vada.jpg" alt="Vada">
-            <h3>Vada</h3>
-            <p>₹30</p>
-            <label for="vada-quantity">Quantity:</label>
-            <input type="number" id="vada-quantity" min="0" max="10" value="0">
-            <button onclick="addToCart('Vada', 30, 'vada-quantity')">Add to Cart</button>
-        </div>
-
-        <!-- Food Item: Poori -->
-        <div class="food-item" data-name="Poori" data-price="40">
-            <img src="images/puri.jpg" alt="Poori">
-            <h3>Poori</h3>
-            <p>₹40</p>
-            <label for="poori-quantity">Quantity:</label>
-            <input type="number" id="poori-quantity" min="0" max="10" value="0">
-            <button onclick="addToCart('Poori', 40, 'poori-quantity')">Add to Cart</button>
-        </div>
-
-        <!-- Food Item: Halwa -->
-        <div class="food-item" data-name="Halwa" data-price="40">
-            <img src="images/halwa.jpg" alt="Halwa">
-            <h3>Halwa</h3>
-            <p>₹40</p>
-            <label for="halwa-quantity">Quantity:</label>
-            <input type="number" id="halwa-quantity" min="0" max="10" value="0">
-            <button onclick="addToCart('Halwa', 40, 'halwa-quantity')">Add to Cart</button>
-        </div>
+        <!-- Menu items will be dynamically added here by JavaScript -->
     </section>
 
     <!-- Checkout Section -->
@@ -81,16 +41,15 @@
         <h2>About Us</h2>
         <p>Welcome to Duddu's Restaurant! We offer a delightful experience with a variety of dishes prepared using fresh ingredients and traditional recipes.</p>
     </section>
-    
+
     <!-- Contact Us Section -->
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Address: 123 Food Street, Flavor Town</p>
         <p>Phone: (123) 456-7890</p>
         <p>Email: contact@duddusrestaurant.com</p>
-    </section>    
+    </section>
 
     <script src="script.js"></script>
 </body>
 </html>
-
